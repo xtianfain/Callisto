@@ -110,7 +110,7 @@
       <div class="pagina oculto" name="pagina-5" id="pagina-5">
         <div class="cabecera">
           <div class="ic-volver" onclick="volver(4)"></div>
-          <div class="ic-buscar" onclick=""></div>
+          <div class="ic-buscar" onclick="irPagina6()"></div>
           <span>5.&nbsp;</span><span>FAMILIA 1</span>
         </div>
         <div class="barra">
@@ -166,7 +166,10 @@
               </div>
             </div>
             <div>
-              <div class="teclado-item-largo tecla-reemplazar" onclick="xxxreemplazar()">
+              <div
+                class="teclado-item-largo tecla-reemplazar"
+                onclick="enviarConteo()"
+              >
                 REEMPLAZAR
               </div>
             </div>
@@ -197,11 +200,11 @@
 
       <div class="pagina oculto" name="pagina-6" id="pagina-6">
         <div class="cabecera">
-          <div class="ic-volver" onclick="xxxcerrarPagina6()"></div>
+          <div class="ic-volver" onclick="cerrarPagina6()"></div>
           <span>6.&nbsp;</span><span>BUSCAR</span>
         </div>
         <div class="barra">
-          <span id="txtNivel5_1">USUARIO</span>
+          <span id="txtNivel6">USUARIO</span>
         </div>
         <div class="cuerpo">
           <div class="teclado">
@@ -214,7 +217,10 @@
               />
             </div>
             <div>
-              <div class="teclado-item-largo tecla-buscar" onclick="xxxbuscar()">
+              <div
+                class="teclado-item-largo tecla-buscar"
+                onclick="buscarProducto()"
+              >
                 BUSCAR
               </div>
             </div>
