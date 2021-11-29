@@ -135,16 +135,15 @@ body {
   float: right;
 }
 .oculto {
-  
   display: none;
 }
-
 
 /*@media screen and (max-width: 800px) {
   .menu .m-item {
     display: block;
   }
   BORRADO
+  hola
 }*/
 
 .teclado {
@@ -181,23 +180,23 @@ body {
   line-height: 60px;
   border-radius: 7px;
 }
-.tecla-num{
+.tecla-num {
   background-color: #001336;
   color: white;
 }
-.tecla-borrar{
+.tecla-borrar {
   background-color: #ae265a;
   color: white;
 }
-.tecla-reemplazar{
+.tecla-reemplazar {
   background-color: #d1c631;
   color: black;
 }
-.tecla-ok{
+.tecla-ok {
   background-color: #0f7572;
   color: white;
 }
-.tecla-buscar{
+.tecla-buscar {
   background-color: #0f7572;
   color: white;
 }
@@ -233,13 +232,11 @@ body {
 }
 .teclado-txt-negro {
   color: black;
-
 }
 .teclado-txt-rojo {
   color: #ae265a;
   font-size: 25px;
-
 }
-.etiqueta-mini{
+.etiqueta-mini {
   font-size: 15px;
 }
