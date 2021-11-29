@@ -39,7 +39,7 @@ function elegirUsuario(u) {
 function mostrarInventarios(){
   const accion = 1;
   const urlAccion = 
-  "https://script.google.com/macros/s/AKfycbwlc7491EjEt-8kMVbF0ReNl07ixk1FmcAL2OB3YIHvqfcU-VjYP2wE2KduSbdJSOYfSA/exec?action=" 
+  "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" 
   + accion;
   var inventarios = [];
   inventarios = loadDoc(urlAccion);
@@ -87,7 +87,7 @@ function mostrarFamilias(codinventario, estado){
   const accion = 2;
   inventarioSelec = codinventario;
   const urlAccion = 
-  "https://script.google.com/macros/s/AKfycbwlc7491EjEt-8kMVbF0ReNl07ixk1FmcAL2OB3YIHvqfcU-VjYP2wE2KduSbdJSOYfSA/exec?action=" + 
+  "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
   accion +  "&codinventario=" + inventarioSelec;
   var familias = loadDoc(urlAccion);
   if (familias.length===0) {
@@ -124,7 +124,7 @@ familiaSelec = familia;
 const accion = 3;
 const familiaConsulta = familia ==="TODAS"? "" : familia;
 const urlAccion = 
-"https://script.google.com/macros/s/AKfycbwlc7491EjEt-8kMVbF0ReNl07ixk1FmcAL2OB3YIHvqfcU-VjYP2wE2KduSbdJSOYfSA/exec?action=" + 
+"https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
 accion +  "&codinventario=" + inventarioSelec + "&familia=" + familiaConsulta;
 var productos = loadDoc(urlAccion);
 if (productos.length===0) {
@@ -226,7 +226,7 @@ function enviarConteo(tipo){
   
   const accion = 4;
   const urlAccion = 
-  "https://script.google.com/macros/s/AKfycbwlc7491EjEt-8kMVbF0ReNl07ixk1FmcAL2OB3YIHvqfcU-VjYP2wE2KduSbdJSOYfSA/exec?action=" + 
+  "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
   accion +  "&codinventario=" + inventarioSelec + "&codfadrisac=" + codfadrisac + "&conteo=" + stockConteo + 
   "&usuario=" + usuario;
   var guardado = loadDoc(urlAccion);
@@ -244,7 +244,7 @@ function buscarProducto(){
   const accion = 5;
   const patron = document.getElementById("textobuscar").value;
   const urlAccion = 
-  "https://script.google.com/macros/s/AKfycbwlc7491EjEt-8kMVbF0ReNl07ixk1FmcAL2OB3YIHvqfcU-VjYP2wE2KduSbdJSOYfSA/exec?action=" + 
+  "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
   accion +  "&codinventario=" + inventarioSelec + "&patron=" + patron
   var resultadoBusq = loadDoc(urlAccion);
   if (resultadoBusq.length===0) {
