@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css?v=1.0" />
+    <script src="js/core.js?v=1.0"></script>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="pagina" name="pagina-1" id="pagina-1">
+        <div class="cabecera"><span>1.&nbsp;</span><span>CALLISTO</span></div>
+        <div class="barra">
+          <span id="txtNivel1">BIENVENIDO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="menu">
+            <div
+              class="m-item color1"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              ANGEL
+            </div>
+            <div
+              class="m-item color2"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              EMERSON
+            </div>
+            <div
+              class="m-item color3"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              MARCELINO
+            </div>
+            <div
+              class="m-item color4"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              MARCO
+            </div>
+            <div
+              class="m-item color5"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              OSCAR
+            </div>
+            <div
+              class="m-item color6"
+              onclick="elegirUsuario(this.textContent)"
+            >
+              MARIO
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-2" id="pagina-2">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="volver(1)"></div>
+          <span>2.&nbsp;</span><span>MENU</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel2">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="menu">
+            <div class="m-item-largo color6" onclick="mostrarInventarios()">
+              INVENTARIO
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-3" id="pagina-3">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="volver(2)"></div>
+          <span>3.&nbsp;</span><span>INVENTARIOS</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel3">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="menu" id="menu-inv">
+            <!-- <div class="m-item-largo color5">FIN DE AÑO</div>
+            <div class="m-item-largo color5">DICIEMBRE</div>
+            <div class="m-item-largo color5">NOVIEMBRE</div>
+            <div class="m-item-largo color5">OCTUBRE</div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-4" id="pagina-4">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="volver(3)"></div>
+          <span>4.&nbsp;</span><span>FAMILIAS</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel4">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="menu" id="menu-familias">
+            <!-- <div class="m-item-largo color4">FAMILIA 1</div>
+            <div class="m-item-largo color4">FAMILIA 2</div>
+            <div class="m-item-largo color4">FAMILIA 3</div>
+            <div class="m-item-largo color4">TODOS</div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-5" id="pagina-5">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="volver(4)"></div>
+          <div class="ic-buscar" onclick=""></div>
+          <span>5.&nbsp;</span><span>FAMILIA 1</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel5">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="menu" id="menu-productos">
+            <!-- <div class="m-item-largo color3">4PK850</div>
+            <div class="m-item-largo color3">4PK855</div>
+            <div class="m-item-largo color3">4PK860</div>
+            <div class="m-item-largo color3">4PK865</div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-5_1" id="pagina-5_1">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="cerrarPagina5_1()"></div>
+          <span>5.&nbsp;</span><span>CONTEO</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel5_1">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="teclado">
+            <div class="teclado-txt">
+              <div class="teclado-txt-negro" id="codigoConteo">
+                25BRU189 CR ASDS
+              </div>
+
+              <div class="teclado-txt-rojo">
+                <span class="etiqueta-mini">cantidad:&nbsp;&nbsp;&nbsp;</span
+                ><span id="cantidadConteo">25200</span>
+              </div>
+            </div>
+            <div>
+              <input
+                type="text"
+                class="caja-doble"
+                id="nuevaCantidad"
+                value="0"
+              />
+              <div
+                class="teclado-item tecla-ok"
+                onclick="enviarConteo('AGREGAR')"
+              >
+                OK
+              </div>
+            </div>
+            <div>
+              <div class="teclado-item-largo tecla-borrar" onclick="borrar()">
+                BORRAR
+              </div>
+            </div>
+            <div>
+              <div class="teclado-item-largo tecla-reemplazar" onclick="xxxreemplazar()">
+                REEMPLAZAR
+              </div>
+            </div>
+            <div>
+              <div class="teclado-item tecla-num" onclick="teclear('7')">7</div>
+              <div class="teclado-item tecla-num" onclick="teclear('8')">8</div>
+              <div class="teclado-item tecla-num" onclick="teclear('9')">9</div>
+            </div>
+            <div>
+              <div class="teclado-item tecla-num" onclick="teclear('4')">4</div>
+              <div class="teclado-item tecla-num" onclick="teclear('5')">5</div>
+              <div class="teclado-item tecla-num" onclick="teclear('6')">6</div>
+            </div>
+            <div>
+              <div class="teclado-item tecla-num" onclick="teclear('1')">1</div>
+              <div class="teclado-item tecla-num" onclick="teclear('2')">2</div>
+              <div class="teclado-item tecla-num" onclick="teclear('3')">3</div>
+            </div>
+            <div>
+              <div class="teclado-item-doble tecla-num" onclick="teclear('0')">
+                0
+              </div>
+              <div class="teclado-item tecla-num" onclick="teclear('.')">.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagina oculto" name="pagina-6" id="pagina-6">
+        <div class="cabecera">
+          <div class="ic-volver" onclick="xxxcerrarPagina6()"></div>
+          <span>6.&nbsp;</span><span>BUSCAR</span>
+        </div>
+        <div class="barra">
+          <span id="txtNivel5_1">USUARIO</span>
+        </div>
+        <div class="cuerpo">
+          <div class="teclado">
+            <div>
+              <input
+                type="text"
+                class="caja-triple"
+                id="textobuscar"
+                value=""
+              />
+            </div>
+            <div>
+              <div class="teclado-item-largo tecla-buscar" onclick="xxxbuscar()">
+                BUSCAR
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pie">Callisto 1.0 - FADRISAC 2021</div>
+    </div>
+  </body>
+</html>

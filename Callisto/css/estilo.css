@@ -1,0 +1,244 @@
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: myriad;
+  src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+body {
+  font-family: roboto;
+  color: #001336;
+}
+.contenedor {
+  max-width: 800px;
+  margin: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.cabecera {
+  height: 64px;
+  background-color: #cbd6e0;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+  font-family: roboto;
+}
+.cabecera span {
+  font-size: 30px;
+  float: left;
+  line-height: 60px;
+}
+.barra {
+  height: 20px;
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
+  font-family: roboto;
+  color: #a0a0a0;
+}
+.barra span {
+  font-size: 15px;
+  float: left;
+  line-height: 20px;
+}
+.cuerpo {
+  padding: 15px;
+}
+.pagina {
+  overflow: auto;
+}
+.menu {
+  width: 100%;
+  text-align: center;
+}
+.m-item {
+  color: black;
+  width: 300px;
+  height: 100px;
+  display: inline-block;
+  margin: 4px;
+  font-size: 35px;
+  line-height: 100px;
+  border-radius: 7px;
+}
+.m-item-largo {
+  color: black;
+  width: 500px;
+  min-height: 60px;
+  height: auto;
+  display: inline-block;
+  margin: 4px;
+  font-size: 35px;
+  _line-height: 100px;
+  border-radius: 7px;
+}
+@media only screen and (max-width: 600px) {
+  .m-item-largo {
+    width: 300px;
+  }
+}
+
+.pie {
+  /*background-color: #cbd6e0;*/
+  text-align: center;
+  padding: 10px;
+  color: #b3b3b3;
+}
+.color1 {
+  background-color: #ae265a;
+  color: white;
+}
+.color2 {
+  background-color: #81268f;
+  color: white;
+}
+.color3 {
+  background-color: #543092;
+  color: white;
+}
+.color4 {
+  background-color: #234c99;
+  color: white;
+}
+.color5 {
+  background-color: #1b69a1;
+  color: white;
+}
+.color6 {
+  background-color: #1286a8;
+  color: white;
+}
+.color7 {
+  background-color: #107e8d;
+  color: white;
+}
+.color8 {
+  background-color: #0f7572;
+  color: white;
+}
+.ic-volver {
+  height: 60px;
+  width: 60px;
+  background-image: url("../img/volver.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  float: right;
+}
+.ic-buscar {
+  height: 60px;
+  width: 60px;
+  background-image: url("../img/lupita.png");
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  float: right;
+}
+.oculto {
+  _display: none;
+}
+
+
+/*@media screen and (max-width: 800px) {
+  .menu .m-item {
+    display: block;
+  }
+}*/
+
+.teclado {
+  width: 100%;
+  text-align: center;
+}
+.teclado-item {
+  color: black;
+  width: 90px;
+  height: 80px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 35px;
+  line-height: 80px;
+  border-radius: 7px;
+}
+.teclado-item-doble {
+  color: black;
+  width: 188px;
+  height: 80px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 35px;
+  line-height: 80px;
+  border-radius: 7px;
+}
+.teclado-item-largo {
+  color: black;
+  width: 285px;
+  height: 60px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 35px;
+  line-height: 60px;
+  border-radius: 7px;
+}
+.tecla-num{
+  background-color: #001336;
+  color: white;
+}
+.tecla-borrar{
+  background-color: #ae265a;
+  color: white;
+}
+.tecla-reemplazar{
+  background-color: #d1c631;
+  color: black;
+}
+.tecla-ok{
+  background-color: #0f7572;
+  color: white;
+}
+.tecla-buscar{
+  background-color: #0f7572;
+  color: white;
+}
+.caja-doble {
+  color: black;
+  width: 188px;
+  height: 80px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 40px;
+  line-height: 80px;
+  border-radius: 7px;
+  text-align: center;
+}
+.caja-triple {
+  color: black;
+  width: 280px;
+  height: 80px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 40px;
+  line-height: 80px;
+  border-radius: 7px;
+  text-align: center;
+}
+.teclado-txt {
+  color: black;
+  width: 300px;
+  display: inline-block;
+  font-size: 30px;
+  /*line-height: 40px;*/
+  /*overflow:hidden;*/
+}
+.teclado-txt-negro {
+  color: black;
+
+}
+.teclado-txt-rojo {
+  color: #ae265a;
+  font-size: 25px;
+
+}
+.etiqueta-mini{
+  font-size: 15px;
+}
