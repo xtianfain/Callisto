@@ -254,6 +254,7 @@ function buscarProducto(){
     return;
   }
   console.log(resultadoBusq); 
+  
   mostrarResultadoBusqueda(resultadoBusq);
 }
 
@@ -275,6 +276,7 @@ resultado.map(value => {
 
 function irPagina6() {
   document.getElementById("txtNivel6").innerText = usuario;
+  document.getElementById("textobuscar").value = "";
   document.getElementById("pagina-5").style.display = "none";
   document.getElementById("pagina-6").style.display = "inline";
 }
