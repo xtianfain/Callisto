@@ -178,6 +178,8 @@ function loadDoc(dirUrl) {
   var xhttp = new XMLHttpRequest();
   var temp = "";
   xhttp.onreadystatechange = function() {
+      if(this.readyState == 1) {
+      }
       if (this.readyState == 4 && this.status == 200) {
         temp = JSON.parse(this.responseText);
           return JSON.parse(this.responseText);
@@ -281,4 +283,16 @@ function cerrarPagina6() {
   document.getElementById("txtNivel5_1").innerText = usuario;
   document.getElementById("pagina-5").style.display = "inline";
   document.getElementById("pagina-6").style.display = "none";
+}
+
+function mostrarLoading(){
+  //document.getElementById("loading").style.display = "inline";
+  //document.getElementById('loading').visible = true;
+  //document.getElementById("contenedor").style.visibility='hidden';
+}
+
+function ocultarLoading(){
+  //document.getElementById("loading").style.display = "none";
+  //document.getElementById("loading").visible = false;
+  //document.getElementById("contenedor").style.visibility='visible';
 }
