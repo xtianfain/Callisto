@@ -76,7 +76,7 @@ function mostrarProductos(familia){
   const familiaConsulta = familia ==="TODAS"? "" : familia;
   const urlAccion = 
   "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
-  accion +  "&codinventario=" + inventarioSelec + "&familia=" + familiaConsulta;
+  accion +  "&codinventario=" + inventarioSelec + "&familia=" + encodeURIComponent(familiaConsulta);
   loadDocAsincrono(urlAccion,mostrarProductosCont);
 }
 
@@ -203,10 +203,10 @@ function enviarConteo(tipo){
 
 function buscarProducto(){
   const accion = 5;
-  const patron = document.getElementById("textobuscar").value;
+  var patron = document.getElementById("textobuscar").value;
   const urlAccion = 
   "https://script.google.com/macros/s/AKfycbzxBDBc3tYiOH_i6aRdN0S-aaKocbOeA04jJNyE7jTbCZ78AbBSw4ns0b4KZ5y7G6tc5g/exec?action=" + 
-  accion +  "&codinventario=" + inventarioSelec + "&patron=" + patron
+  accion +  "&codinventario=" + inventarioSelec + "&patron=" + encodeURIComponent(patron);
   loadDocAsincrono(urlAccion,buscarProductoCont);
 }
 
