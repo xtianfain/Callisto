@@ -285,7 +285,7 @@ function mostrarInventariosCont(rpta){
       iDiv.id = value.codInventario;
       iDiv.textContent = value.comentario;
       if (value.estado === "CERRADO")
-      iDiv.className = 'm-item-largo color5';
+      iDiv.className = 'm-item-largo color9';
       else iDiv.className = 'm-item-largo color8';
       iDiv.setAttribute('onclick',"mostrarFamilias(id,'" +value.estado + "')");
       document.getElementById("menu-inv").appendChild(iDiv);
