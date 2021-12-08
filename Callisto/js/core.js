@@ -308,7 +308,7 @@ function mostrarProductosCont(rpta){
         iDiv.id = value.codFadrisac;
         iDiv.textContent = value.codBando;
         var color = 'm-item-largo color3'; 
-        if (value.estado === 'RECONTAR' || value.estado === 'POR PROCESAR' ) 
+        if (value.estado === 'POR PROCESAR') 
         color = 'm-item-largo color8';
 
         iDiv.className = color;
