@@ -219,7 +219,10 @@ resultado.map(value => {
     var iDiv = document.createElement('div');
     iDiv.id = value.codFadrisac;
     iDiv.textContent = value.codBando;
-    iDiv.className = value.estado === 'ABIERTO'? 'm-item-largo color3':'m-item-largo color8'
+    var color = 'm-item-largo color3'; 
+    if (value.estado === 'POR PROCESAR') 
+    color = 'm-item-largo color8';
+    iDiv.className = color;
     iDiv.setAttribute('onclick',"irPagina5_1(id,textContent," + value.stockConteo + ")");
     document.getElementById("menu-productos").appendChild(iDiv);
   });
@@ -229,6 +232,7 @@ resultado.map(value => {
 function irPagina6() {
   document.getElementById("txtNivel6").innerText = usuario;
   document.getElementById("textobuscar").value = "";
+  document.getElementById("pagina-4").style.display = "none";
   document.getElementById("pagina-5").style.display = "none";
   document.getElementById("pagina-6").style.display = "inline";
 }
@@ -299,9 +303,9 @@ function mostrarProductosCont(rpta){
     document.getElementById("menu-productos").innerHTML="";
     
     productos.sort( (a,b) => {
-      if (a.estado > b.estado)
+      if (a.orden > b.orden)
         return 1;
-      else if (a.estado < b.estado)
+      else if (a.orden < b.orden)
       return -1;
       return 0;
     });
@@ -319,6 +323,7 @@ function mostrarProductosCont(rpta){
         document.getElementById("menu-productos").appendChild(iDiv);
       });
       irPagina5();
+      
 }
 
 function enviarConteoCont(rpta){
@@ -338,7 +343,7 @@ function buscarProductoCont(rpta){
     alert('No se encontró el producto.');
     return;
   }
-  console.log(resultadoBusq); 
+  //console.log(resultadoBusq); 
   
   mostrarResultadoBusqueda(resultadoBusq);
 }
