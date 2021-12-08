@@ -255,7 +255,7 @@ function mostrarLoading(){
 function ocultarLoading(){
   /*$("body").loading("stop");*/
   document.getElementById("loading").style.display = "none";
-  document.getElementById("contenedor").scrollIntoView();
+  //document.getElementById("contenedor").scrollIntoView();
 }
 
 function mostrarInventariosCont(rpta){
@@ -325,6 +325,7 @@ function enviarConteoCont(rpta){
   var guardado = rpta;
   if (guardado)
   alert("Grabado exitoso.");
+  //mostrarMsg("Grabado exitoso.");
   else alert("No se pudo grabar.");
  
   document.getElementById("nuevaCantidad").value="";
@@ -370,4 +371,9 @@ function mostrarFamiliasCont(rpta,codinventario){
 
 function inicio(){
   setTimeout("document.getElementById('intro').style.display = 'none';", 500);
+}
+function mostrarMsg(mensaje){
+  document.getElementById("msgRpta").innerHTML=mensaje;
+  $("#myModal").modal();
+
 }
