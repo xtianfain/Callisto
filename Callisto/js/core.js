@@ -307,7 +307,11 @@ function mostrarProductosCont(rpta){
         var iDiv = document.createElement('div');
         iDiv.id = value.codFadrisac;
         iDiv.textContent = value.codBando;
-        iDiv.className = value.estado === 'ABIERTO'? 'm-item-largo color3':'m-item-largo color8'
+        var color = 'm-item-largo color3'; 
+        if (value.estado === 'RECONTAR' || value.estado === 'POR PROCESAR' ) 
+        color = 'm-item-largo color8';
+
+        iDiv.className = color;
         iDiv.setAttribute('onclick',"irPagina5_1(id,textContent," + value.stockConteo + ")");
         document.getElementById("menu-productos").appendChild(iDiv);
       });
