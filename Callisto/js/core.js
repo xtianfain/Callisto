@@ -246,13 +246,16 @@ function mostrarLoading(){
     theme: "dark"
   });
   $("body").loading("start");*/
-
+  var altoLoading = document.getElementById("contenedor").offsetHeight;
+  if (altoLoading<screen.height){altoLoading=screen.height}
+  document.getElementById("loading").style.height = altoLoading+"px";
   document.getElementById("loading").style.display = "inline";
 }
 
 function ocultarLoading(){
   /*$("body").loading("stop");*/
   document.getElementById("loading").style.display = "none";
+  document.getElementById("contenedor").scrollIntoView();
 }
 
 function mostrarInventariosCont(rpta){
@@ -359,4 +362,8 @@ function mostrarFamiliasCont(rpta,codinventario){
     document.getElementById("menu-familias").appendChild(iDiv);
   });
   irPagina4();
+}
+
+function inicio(){
+  setTimeout("document.getElementById('intro').style.display = 'none';", 500);
 }
