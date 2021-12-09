@@ -1,6 +1,8 @@
 var usuario = "";
 var inventarioSelec = "";
 var familiaSelec = "";
+var posicionScroll=0;
+var paginaScroll="";
 
 function volver(pag) {
   switch (pag) {
@@ -84,8 +86,15 @@ function irPagina5() {
   document.getElementById("txtNivel5").innerText = usuario;
   document.getElementById("pagina-4").style.display = "none";
   document.getElementById("pagina-5").style.display = "inline";
+  if(paginaScroll=="CONTEO"){
+    window.scrollTo(0,posicionScroll);
+    //Se resetea las variables
+    posicionScroll=0;
+    paginaScroll="";
+  }
 }
 function irPagina5_1(codFadrisac,codBando,stockConteo) {
+  posicionScroll=document.documentElement.scrollTop;
   document.getElementById("txtNivel5_1").innerText = codFadrisac;
   document.getElementById("codigoConteo").innerText = codBando;
   document.getElementById("cantidadConteo").innerText = stockConteo;
@@ -183,6 +192,7 @@ document.getElementById("nuevaCantidad").value="";
 
 function enviarConteo(tipo){
   //alert("aquí se debe enviar el conteo al servicio");
+  paginaScroll="CONTEO";
   var stockConteo = 0;
   if (tipo==="AGREGAR") {
   var cantidad_previa = document.getElementById("cantidadConteo").textContent;
