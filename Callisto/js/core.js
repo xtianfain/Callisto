@@ -105,7 +105,7 @@ function cerrarPagina5_1() {
   document.getElementById("txtNivel5").innerText = usuario;
   document.getElementById("pagina-5_1").style.display = "none";
   document.getElementById("pagina-5").style.display = "inline";
-  mostrarProductos(familiaSelec);
+  document.getElementById("textobuscar").value !== ""?  buscarProducto(): mostrarProductos(familiaSelec);
 }
 
 
@@ -352,6 +352,7 @@ function buscarProductoCont(rpta){
   var resultadoBusq = rpta;
   if (resultadoBusq.length===0) {
     alert('No se encontró el producto.');
+    irPagina6();
     return;
   }
   //console.log(resultadoBusq); 
